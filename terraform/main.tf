@@ -83,10 +83,10 @@ resource "aws_security_group" "k8s_sg" {
 
   # Internal Kubernetes communication
   ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    self        = true
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+    self      = true
   }
 
   egress {
