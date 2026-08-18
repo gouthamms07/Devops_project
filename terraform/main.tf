@@ -3,6 +3,15 @@ provider "aws" {
 }
 
 # -------------------------
+# VARIABLES
+# -------------------------
+variable "key_name" {
+  description = "Existing AWS EC2 key pair name"
+  type        = string
+  default     = "k8s-key"
+}
+
+# -------------------------
 # VPC
 # -------------------------
 resource "aws_vpc" "main" {
@@ -64,7 +73,7 @@ resource "aws_security_group" "k8s_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # NodePort range
+  # NodePort
   ingress {
     from_port   = 30000
     to_port     = 32767
@@ -72,7 +81,7 @@ resource "aws_security_group" "k8s_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # INTERNAL COMMUNICATION (VERY IMPORTANT)
+  # Internal Kubernetes communication
   ingress {
     from_port   = 0
     to_port     = 0
@@ -82,27 +91,10 @@ resource "aws_security_group" "k8s_sg" {
 
   egress {
     from_port   = 0
-    to_port     = 0
+    to_port     0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
-
-# -------------------------
-# KEY
-# -------------------------
-resource "tls_private_key" "ssh_key" {
-  algorithm = "RSA"
-}
-
-resource "aws_key_pair" "key" {
-  key_name   = "k8s-key"
-  public_key = tls_private_key.ssh_key.public_key_openssh
-}
-
-resource "local_file" "private_key" {
-  content  = tls_private_key.ssh_key.private_key_pem
-  filename = "k8s-key.pem"
 }
 
 # -------------------------
@@ -113,7 +105,7 @@ resource "aws_instance" "master" {
   instance_type          = "t2.medium"
   subnet_id              = aws_subnet.subnet.id
   vpc_security_group_ids = [aws_security_group.k8s_sg.id]
-  key_name               = aws_key_pair.key.key_name
+  key_name               = var.key_name
 
   tags = {
     Name = "k8s-master"
@@ -128,7 +120,7 @@ resource "aws_instance" "worker" {
   instance_type          = "t2.medium"
   subnet_id              = aws_subnet.subnet.id
   vpc_security_group_ids = [aws_security_group.k8s_sg.id]
-  key_name               = aws_key_pair.key.key_name
+  key_name               = var.key_name
 
   tags = {
     Name = "k8s-worker"
