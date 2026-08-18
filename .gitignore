@@ -5,3 +5,8 @@
 *.pem
 *.key
 .terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+.terraform/
+*.tfvars
+*.tfvars.json

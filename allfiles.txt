@@ -1,0 +1,33 @@
+08ab5dfb09a229fc1c1139bf6d1e8808589959d6
+c601e6de240f74ad5125fe84ca3a3348753f2a66
+1d221e3ddd393f1ce922152d5195b084ff4647b5 
+3d87fced769c75afc7e79e794f5a91f8ecf5c3da 
+f9c3f522342a5e32408af2d7700d90a89327079d ansible
+d495916ebbaa27121144d0a2953af3ba27e94fdd ansible/inventory.ini
+a490272804df15691d17715b9be8891a75a92fd9 ansible/site.yml
+b5efebd26c2c61d594f2d7016b8dc65a9be0478b ansible/terraform.tfstate
+f7ce9e179c3e0cc9bf3cf31c87f753c46bd60834 README.md
+5951dabf6e9aed729879f12b4228cac4a486d665 terraform
+397a28d45f4d7d5efa5ed70ab6e0919ff5f8715d terraform/.terraform
+5a2337582385adca0954018d6ad011ff01849ab1 terraform/.terraform.lock.hcl
+6a15437b8da5bdf45f4c2d746a725c0191ef3095 terraform/.terraform/providers
+24741e3b68337b1ed60baa2dae52aef662a2dc63 terraform/.terraform/providers/registry.terraform.io
+9a52a09e42093255cc51b464dcf0d39e1a2238d3 terraform/.terraform/providers/registry.terraform.io/hashicorp
+157a0f4adef91bfb5410f2889fa5bf69652de83d terraform/.terraform/providers/registry.terraform.io/hashicorp/aws
+388014328236c9c09d515fbb7c17f7b16058af2a terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/6.39.0
+6d74ec6f65d529862b312950c1f89b2c2d008734 terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/6.39.0/darwin_arm64
+e844cd4003a607ba31bbbd7613804ec14b772618 terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/6.39.0/darwin_arm64/LICENSE.txt
+81418a180f3b9057ff6a13dd0c1ffa1e79e8e969 terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/6.39.0/darwin_arm64/terraform-provider-aws_v6.39.0_x5
+6007462ca2a779886be808d2e1f1040051499f5d terraform/.terraform/providers/registry.terraform.io/hashicorp/local
+ddf195c694673df4c48c5ec76d33f22d83422912 terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.8.0
+1b01f5be90f7f539fcbaee6a23c1cd738279b8d1 terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.8.0/darwin_arm64
+766add2afab778659e8d0d768b7e25418f56db45 terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.8.0/darwin_arm64/LICENSE.txt
+b150991d53d626c7f141751089143332bada66e5 terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.8.0/darwin_arm64/terraform-provider-local_v2.8.0_x5
+5fcfa63d709ab7b5581cd162606225b60d607032 terraform/.terraform/providers/registry.terraform.io/hashicorp/tls
+5d6a2737a4a4442425b02caece04d5e65dc1d1ee terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.2.1
+b7a43e83e94211bc25415b731b74eed100195cad terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.2.1/darwin_arm64
+b9ac071eb6387e85c6e4d5df995839696db0e513 terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.2.1/darwin_arm64/LICENSE.txt
+700a7a0956a81cd9741f5bbb8c9916332de6e6ee terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.2.1/darwin_arm64/terraform-provider-tls_v4.2.1_x5
+463355202ff74501ac417f8ffcaba7172c0ce1da terraform/main.tf
+2eea3cfc805c142a5eb8fdedbe180a57dc8fc4eb terraform/terraform.tfstate
+fad6e1a40ce817698909000c1ec936097c9e5a6b terraform/terraform.tfstate.backup
