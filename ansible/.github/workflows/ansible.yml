@@ -1,0 +1,31 @@
+name: Ansible Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ansible:
+    name: Configure Servers
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/k8s-key.pem
+          chmod 600 ~/.ssh/k8s-key.pem
+
+      - name: Run Ansible
+        working-directory: ansible
+        run: |
+          ansible-playbook \
+            -i inventory.ini \
+            site.yml
